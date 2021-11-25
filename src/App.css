@@ -1,38 +1,321 @@
+.outterBody {
+  background-color: rgb(240, 240, 240);
+  width: 99vw;
+  padding: 0;
+  margin: 0;
+}
 .App {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: rgb(218, 224, 230);
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+
+  width: 882px;
+  margin: auto;
+}
+
+/*_________Header__________*/
+
+.HeaderDiv {
+  height: 70px;
+  min-height: 50px;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerElement, .emptyDiv{
+  min-width: 185px;
+  padding-left: 20px;
+}
+
+.HeaderDiv form {
+  width: 60%;
+  max-width: 787px;
+  padding-left: 40px;
+  margin-left: 40px;
+}
+
+.search-bar {
+  padding-left: 40px;
+
+  width: 85%;
+  max-width: 787px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.HeaderDiv img {
+  position: absolute;
+  vertical-align: middle;
+  top: 23px;
+  margin-left: 6px;
+  height: 24px;
+  width: 24px;
+}
+
+.headerElementCategories {
+  position: relative;
+  right: 37px
+}
+
+.HeaderDivMenu {
+  margin: 0 10px;
+}
+ 
+/*_________SearchBoxDiv__________*/
+
+.searchBoxDiv {
+  display: none;
+}
+
+.searchBoxDivDisplay {
+  height: 300px;
+  width: 68%;
+  max-width: 835px;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 75px;
+  overflow: auto;
+  border: solid 2px rgb(230, 230, 230);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.searchBoxDivDisplay p{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.searchBoxItem {
+border-bottom: solid 1px rgb(230, 230, 230);
+}
+
+.searchBoxItem:hover {
+  cursor: pointer;
+
+}
+
+/*_________Feed__________*/
+
+.FeedDiv { 
+  max-width: 606px;
+  min-width: 532px;
+  margin: 24px 4px 24px 24px;
+  overflow: visible;
+}
+
+.FeedDiv:hover {
+  cursor: pointer;
+}
+
+/*_________Post with image__________*/
+
+.outterPostDiv{
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+  height: 190px;
+  width: 510px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.mainBody {
+  width: 470px;
+  position: relative;
+  bottom: 13px;
+}
+
+.subSection, .commentSection {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  background-color: white;
+  color: grey;
+  font-size: 13px;
+}
+
+.commentSection {
+  height: 56px;
+  line-height: 70px;
+  position: relative;
+  bottom: 14px;
+}
+
+.PostDiv {
+  background-color: white;
+  justify-content: space-between;
+  display: flex;
+  height: 105px;
+}
+
+.PostDiv h1 {
+  margin: 0px 0 0 10px;
+  padding: 0;
+  font-size: 16px;
+  color: rgb(34, 34, 34);
+}
+
+.PostDiv img {
+  height: 104px;
+  width: 138px;
+  border-radius: 5px;
+  margin: 0 16px;
+}
+
+.upvotes {
+  width: 40px;
+  font-size: 13px;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+
+/*________ Post without image______*/
+.outterPostDivNoImg {
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+  height: 100px;
+  width: 510px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.PostDivNoImg {
+  background-color: white;
+  height: 30px;
+  position: relative;
+  bottom: 12px;
+}
+
+.PostDivNoImg h1{
+  background-color: white;
+  font-size: 16px;
+  height: 60px;
+  padding-left: 10px;
+}
+
+.commentSectionNoImg {
+  background-color: white;
+  color: grey;
+  height: 26px;
+  padding-left: 10px;
+  font-size: 13px;
+  position: relative;
+  bottom: 10px;
+}
+
+/*_________Categories__________*/
+
+.CategoriesDiv {
+  margin: 23px 24px 0 0;
+}
+
+.CategoriesDiv img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.categories {
+  width: 300px;
+  background-color: rgb(49, 49, 49);
+  color: white;
+  border-radius: 5px;
+  height: 70px;
+  display: flex;
+}
+
+.categories h2 {
+  align-self: flex-end;
+  padding-left: 15px;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.CategoriesDiv button {
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid rgb(211, 211, 211);
+  padding: 15px 32px;
+  text-decoration: none;
+  text-align: left;
+  display: inline-block;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+  width: 300px;
+  display: flex;
+}
+
+.CategoriesDiv button:hover {
+  cursor: pointer;
+}
+
+.CategoriesDiv button span {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 881px) {
+  .body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    min-width: 520px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .CategoriesDiv{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .searchBoxDivDisplay {
+    height: 300px;
+    width: 95%;
+    max-width: 835px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    display: block;
+    margin-left: 10px;
+    top: 75px;
+    overflow: auto;
+    border: solid 2px rgb(230, 230, 230);
+    border-radius: 10px;
+    z-index: 2;
   }
-}
+
+  .search-bar {
+    padding: 0 40px;
+    width: 80%;
+    max-width: 710px;
+    height: 30px;
+    border-radius: 5px;
+  }
+
+  .HeaderDiv form {
+    flex-grow: 2;
+    padding-left: 10px;
+  }
+
+  .headerElement { 
+    display: none;
+  }
+
+  .FeedDiv { 
+    max-width: 606px;
+    min-width: 512px;
+    margin: 24px 4px 24px 24px;
+    overflow: visible;
+  }
+
+} 
